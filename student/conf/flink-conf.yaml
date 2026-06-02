@@ -43,10 +43,10 @@ rest.address: 0.0.0.0
 #   이 과제의 데이터 규모라면 어느 쪽이 적합할까요?
 #   힌트: hashmap
 # -----------------------------------------------------------------------------
-execution.checkpointing.interval: 10000
-execution.checkpointing.mode: EXACTLY_ONCE
-state.checkpoints.dir: file:///data/flink-checkpoints
-state.backend: hashmap
+# execution.checkpointing.interval:
+# execution.checkpointing.mode:
+# state.checkpoints.dir:
+# state.backend:
 
 # -----------------------------------------------------------------------------
 # TODO: 병렬성
@@ -69,5 +69,5 @@ state.backend: hashmap
 #   TM 수(3) × numberOfTaskSlots 이하여야 슬롯이 부족하지 않습니다.
 #   힌트: 3
 # -----------------------------------------------------------------------------
-taskmanager.numberOfTaskSlots: 2
-parallelism.default: 3
+# taskmanager.numberOfTaskSlots:
+# parallelism.default:
