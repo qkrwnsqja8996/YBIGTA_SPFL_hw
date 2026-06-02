@@ -1,7 +1,7 @@
 name: Validate Submission
 
 on:
-  pull_request:
+  pull_request_target:
     branches: [main]
     paths:
       - "submissions/**"
@@ -9,6 +9,7 @@ on:
 permissions:
   pull-requests: write
   contents: read
+  issues: write
 
 jobs:
   validate:
@@ -16,6 +17,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
 
       - name: 제출자 확인
         id: find
