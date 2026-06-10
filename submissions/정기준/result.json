@@ -1,0 +1,69 @@
+{
+    "scenarios_passed":  5,
+    "scenarios_total":  5,
+    "penalty_ms":  0,
+    "total_elapsed_ms":  138812,
+    "scenarios":  [
+                      {
+                          "id":  "01",
+                          "name":  "flink-basic",
+                          "passed":  true,
+                          "job_id":  "",
+                          "events_injected":  1000,
+                          "processing_latency_ms":  2799,
+                          "events_per_second":  357.3,
+                          "output_sha256":  "f6ff1613256f362856bf797e26bb1093ff8bb5013ffc922e98462f90cd576faa",
+                          "expected_sha256":  "f6ff1613256f362856bf797e26bb1093ff8bb5013ffc922e98462f90cd576faa",
+                          "elapsed_ms":  16606
+                      },
+                      {
+                          "id":  "02",
+                          "name":  "spark-batch",
+                          "passed":  true,
+                          "rows_processed":  10000,
+                          "rows_per_second":  371,
+                          "shuffle_partitions_used":  6,
+                          "job_time_ms":  26977,
+                          "output_sha256":  "55b1f846166943d0bfc850490f97beb4e4c31821abdfea2ad77db05674e8e2df",
+                          "expected_sha256":  "55b1f846166943d0bfc850490f97beb4e4c31821abdfea2ad77db05674e8e2df",
+                          "elapsed_ms":  29215
+                      },
+                      {
+                          "id":  "03",
+                          "name":  "stream-vs-batch",
+                          "passed":  true,
+                          "events_count":  1000,
+                          "flink_latency_ms":  1425,
+                          "spark_job_time_ms":  12365,
+                          "latency_ratio":  8.7,
+                          "flink_events_per_second":  701.8,
+                          "spark_events_per_second":  80.9,
+                          "flink_output_sha256":  "f6ff1613256f362856bf797e26bb1093ff8bb5013ffc922e98462f90cd576faa",
+                          "spark_output_sha256":  "af6383ba78c36e0babe7078be7f11a8d90291730fee7b583c21e0e5745f83904",
+                          "elapsed_ms":  31588
+                      },
+                      {
+                          "id":  "04",
+                          "name":  "spark-shuffle",
+                          "passed":  true,
+                          "shuffle_partitions_used":  6,
+                          "rows_processed":  50000,
+                          "rows_per_second":  3977,
+                          "job_time_ms":  12572,
+                          "baseline_time_ms":  13919,
+                          "speedup_factor":  1.11,
+                          "output_sha256":  "9d4b341869b2fa7b105ff2192c923c2de5f41775215b45c0ce98e7f98635bb72",
+                          "expected_sha256":  "9d4b341869b2fa7b105ff2192c923c2de5f41775215b45c0ce98e7f98635bb72",
+                          "elapsed_ms":  31031
+                      },
+                      {
+                          "id":  "05",
+                          "name":  "pipeline",
+                          "passed":  true,
+                          "events_injected":  2000,
+                          "flink_output_sha256":  "eb395e4aab6aa623087308a8aeed3854b5450d134a37b3038d46d0b1bdbe9367",
+                          "spark_output_sha256":  "bb68c7a165e1a9b53f602d8abd6814036a9b51f5a3f024c934371f5fa7295c3c",
+                          "elapsed_ms":  30372
+                      }
+                  ]
+}
